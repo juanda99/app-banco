@@ -1,0 +1,25 @@
+# Use root/example as user/password credentials
+
+services:
+  db:
+    image: mysql:8
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      LANG: C.UTF-8
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./bbdd/mysql:/var/lib/mysql
+      - ./bbdd/initData:/docker-entrypoint-initdb.d
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 5555:80
+    # environment:
+    #   - PMA_HOST=db
