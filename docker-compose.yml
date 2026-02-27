@@ -5,7 +5,7 @@ services:
     image: mysql:8
     restart: always
     ports:
-      - 3306:3306
+      - 3307:3306
     environment:
       LANG: C.UTF-8
       MYSQL_ROOT_PASSWORD: example
@@ -20,6 +20,6 @@ services:
     image: phpmyadmin
     restart: always
     ports:
-      - 5555:80
+      - 5556:80
     # environment:
     #   - PMA_HOST=db

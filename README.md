@@ -22,7 +22,7 @@ Sistema bancario completo con autenticación de usuarios, desarrollado con **Nod
 
 ```bash
 cd cuenta-bancaria
-docker-compose up -d
+docker compose up -d
 ```
 
 ### 2. Iniciar el Backend
@@ -150,8 +150,7 @@ cuenta-bancaria/
 │
 ├── bbdd/
 │   └── initData/
-│       ├── banco_demo.sql           # Estructura de BD y datos
-│       └── add_auth.sql             # Migración de autenticación
+│       └── banco_demo.sql           # Estructura de BD y datos de prueba
 │
 ├── docker-compose.yml               # Configuración Docker
 └── README.md                 # Esta guía

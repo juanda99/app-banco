@@ -1,0 +1,17 @@
+# Variables de entorno (nunca subir a git)
+.env
+
+# Datos de MySQL (volumen de Docker)
+bbdd/mysql/
+
+# Dependencias
+node_modules/
+
+# Cobertura de tests
+coverage/
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
